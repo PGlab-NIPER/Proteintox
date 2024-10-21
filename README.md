@@ -62,9 +62,9 @@ Before running these scripts, create a new conda environment and install the fol
 ## Usage for running python script for model prediction
 The ``descriptors_output_ccc_df.csv`` file is the input file for the main prediction script. Add the scaler and model .pkl files as arguments. 
 - Ensure that all the files are present in the same folder when running the script.
-- Run desc2model.py.
+- Run desc_2_model.py
 ```
-  python desc2model.py scaler.pkl model.pkl descriptors_output_ccc_df.csv
+  python desc_2_model.py scaler.pkl model.pkl descriptors_output_ccc_df.csv
 ```
 - Prediction results will be saved in `predictions_output.csv` which includes predicted toxicity of FASTA sequences of proteins.
 - Prediction results contain column 'Predicted Class'. This file contains the final results (whether the FASTA sequences  are Cardiotoxic, Neurotoxic, Enterotoxic or Non-toxic). 
