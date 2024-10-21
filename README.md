@@ -1,7 +1,7 @@
 # Proteintox 
 This is a machine learning model for protein toxicity prediction that can identify proteins and peptides that may have cardiotoxic, enterotoxic, or neurotoxic. The models integrated diverse features, including physicochemical properties (PnGT), composition-transition-distribution (CTD), conjoint-triads (CTraid), and amino acids composition (Compo) derived from protein primary sequence, enabling a holistic analysis of the molecules' toxicity potential. The fasta sequences of proteins are given as input and the model predicts the toxicity pf proteins.
 * R language for descriptors calculations
-* python for model predictions
+* Python for model predictions
 
 ## Contents
 ### Pediction_files
@@ -16,9 +16,9 @@ This is a machine learning model for protein toxicity prediction that can identi
 ### Training_files
 - ```fasta2desc_calculations_all.R``` : R script for calculating the all descriptors from FASTA input
 - ```Feature_Selection_Code``` : For boruta feature selection 
-- ```knn_script.py```: python script for k-nearest neighbour model training
-- ```rf_script.py```: python script for random forest model training
-- ```svm_script.py```: python script for support vector machine model training
+- ```knn_script.py```: Python script for k-nearest neighbour model training
+- ```rf_script.py```: Python script for random forest model training
+- ```svm_script.py```: Python script for support vector machine model training
 
 
 ## System Dependencies for R
