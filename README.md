@@ -1,5 +1,5 @@
 # Proteintox 
-This is a machine learning model for protein toxicity prediction that can identify proteins and peptides that may have cardiotoxic, enterotoxic, or neurotoxic. The models integrated diverse features, including physicochemical properties (PnGT), composition-transition-distribution (CTD), conjoint-triads (CTraid), and amino acids composition (Compo) derived from protein primary sequence, enabling a holistic analysis of the molecules' toxicity potential. The fasta sequences of proteins are given as input and the model predicts the toxicity pf proteins.
+This is a machine learning model for protein toxicity prediction that can identify proteins and peptides that may have cardiotoxic, enterotoxic, or neurotoxic. The models integrated diverse features, including physicochemical properties (PnGT), composition-transition-distribution (CTD), conjoint-triads (CTraid), and amino acids composition (Compo) derived from protein primary sequence, enabling a holistic analysis of the molecules' toxicity potential. The FASTA sequences of proteins are given as input and the model predicts the toxicity pf proteins.
 * R language for descriptors calculations
 * Python for model predictions
 
