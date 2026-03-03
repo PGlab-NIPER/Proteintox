@@ -6,7 +6,6 @@ This is a machine learning model for protein toxicity prediction that can identi
 ## Contents
 
 ### PackageRequirement
-- ```conda_packages.txt``` : Package required for conda environment
 - ```requirements.txt``` : Python packagers required for conda environment
 
 ### Feature_calculation
@@ -93,7 +92,6 @@ Before running these scripts, create a new conda environment
 ```
   conda create -n env_name python=3.11
   conda activate env_name
-  conda install --file conda_packages.txt
   pip install -r requirements.txt
 ```
 ### Prepare input
