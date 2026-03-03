@@ -97,7 +97,7 @@ Before running these scripts, create a new conda environment
 ### Prepare input
 To calculate descriptors refer to the sample sample_input.fasta file added to the repository. User can upload the query sequences in the form of a FASTA file that can contain n number of sequences. Make sure to remove the ambiguous amino acids (such as X) from the sequences; otherwise, it will result in an error. Running this script produces a csv file named 'descriptors_output_ccc_df.csv' in the same folder. This file is the input file for the main prediction script.
 
-### Run feature selection code
+### Run feature calculation code
 ```
   python feature_calculation.py
 ```
