@@ -32,7 +32,7 @@ This is a machine learning model for protein toxicity prediction that can identi
 - ```Test_data.csv``` : Test Dataset
 
 
-## Prediction using the features calculated form R script
+## Prediction using the features calculated from R script
 ### System Dependencies for R
 * R language (64 bit) 
 * make sure to add the path of R language to the sytem environment variables.
@@ -82,7 +82,7 @@ The ``descriptors_output_ccc_df.csv`` file is the input file for the main predic
 - Prediction results contain column 'Predicted Class'. This file contains the final results (whether the FASTA sequences  are Cardiotoxic, Neurotoxic, Enterotoxic or Non-toxic). 
 
 
-## Prediction using the features calculated form pyhon script
+## Prediction using the features calculated from python script
 ### Required R libraries
 * Use following command in the command prompt to install required R libraries:
 ```bash
