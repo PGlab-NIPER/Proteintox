@@ -53,7 +53,7 @@ Rscript -e "install.packages(c('protr','readr'),repos='https://cloud.r-project.o
 ```
 ### Usage for running R script for calculating descriptors
 In order to run the R script to calculate descriptors refer to the sample sample_input.fasta file added to the repository. User can upload the query sequences in the form of a FASTA file that can contain n number of sequences. Make sure to remove the ambiguous amino acids (such as X) from the sequences; otherwise, it will result in an error. Running this script produces a csv file named 'descriptors_output_ccc_df.csv' in the same folder. This file is the input file for the main prediction script.
-- Download ```Pediction_files`` and ensure that all the files are present in the same folder when running the script. Ensure that train.rds should be in folder.
+- Download `Pediction_files` and ensure that all the files are present in the same folder when running the script. Ensure that train.rds should be in folder.
 - Then Use the following command by changing the current working directory to the folder where repository fasta2desc_ccc.R is saved.
 ```
   Rscript fasta2desc_ccc.R
@@ -91,7 +91,7 @@ Rscript -e "install.packages(c('protr','readr','readxl'),repos='https://cloud.r-
 ### Prerequisites for running python feature calculation and prediction script
 Before running these scripts, create a new conda environment
 ```
-  conda create -n env_name python=3.10
+  conda create -n env_name python=3.11
   conda activate env_name
   conda install --file conda_packages.txt
   pip install -r requirements.txt
