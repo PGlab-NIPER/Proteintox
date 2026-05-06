@@ -109,7 +109,7 @@ To calculate descriptors refer to the sample sample_input.fasta file added to th
 
 ### Output file
 ```
-  Predictions.output.csv
+  predictions_output.csv
 ```
 
 ## Citation
