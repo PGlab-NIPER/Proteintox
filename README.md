@@ -6,7 +6,7 @@ This is a machine learning model for protein toxicity prediction that can identi
 ## Contents
 
 ### PackageRequirement
-- ```requirements.txt``` : Python packagers required for conda environment
+- ```environment.yml``` : Conda environment configuration file
 
 ### Feature_calculation
 - ```fasta2desc_ccc.R``` : R script for calculating the descriptors from FASTA input
@@ -52,10 +52,10 @@ Rscript -e "install.packages(c('protr','readr'),repos='https://cloud.r-project.o
 ```
 ### Usage for running R script for calculating descriptors
 In order to run the R script to calculate descriptors refer to the sample sample_input.fasta file added to the repository. User can upload the query sequences in the form of a FASTA file that can contain n number of sequences. Make sure to remove the ambiguous amino acids (such as X) from the sequences; otherwise, it will result in an error. Running this script produces a csv file named 'descriptors_output_ccc_df.csv' in the same folder. This file is the input file for the main prediction script.
-- Download `Pediction_files` and ensure that all the files are present in the same folder when running the script. Ensure that train.rds should be in folder.
+- Download `Feature_calculation` and `Prediction_files`, ensure that all the files are present in the same single folder when running the script. Ensure that train.rds should be in folder.
 - Then Use the following command by changing the current working directory to the folder where repository fasta2desc_ccc.R is saved.
 ```
-  Rscript fasta2desc_ccc.R
+Rscript fasta2desc_ccc.R
 ```
 - Users wil be prompted to select .fasta file of sample fasta files
 - Once the .fasta file is selected and the process is completed, results will be saved in descriptors_output_ccc_df.csv file.
@@ -88,28 +88,39 @@ The ``descriptors_output_ccc_df.csv`` file is the input file for the main predic
 Rscript -e "install.packages(c('protr','readr','readxl'),repos='https://cloud.r-project.org', dependencies=TRUE)"
 ```
 ### Prerequisites for running python feature calculation and prediction script
-Before running these scripts, create a new conda environment
-```
-  conda create -n env_name python=3.11
-  conda activate env_name
-  pip install -r requirements.txt
-```
+- Download `Feature_calculation` and `Prediction_files`, ensure that all the files are present in the same single folder when running the script. Ensure that train.rds should be in folder.
+- 
 ### Prepare input
 To calculate descriptors refer to the sample sample_input.fasta file added to the repository. User can upload the query sequences in the form of a FASTA file that can contain n number of sequences. Make sure to remove the ambiguous amino acids (such as X) from the sequences; otherwise, it will result in an error. Running this script produces a csv file named 'descriptors_output_ccc_df.csv' in the same folder. This file is the input file for the main prediction script.
 
-### Run feature calculation code
+1. Before running these scripts, create a new conda environment
 ```
-  python feature_calculation.py
+conda env create -f environment.yml
 ```
-
-### Run parediction code
+2. Activate conda env
 ```
-  python proteintox.py
+conda activate pt
 ```
-
-### Output file
+3. Install R package `protr`
 ```
-  predictions_output.csv
+# Start R
+R
+# Then install protr
+install.packages("protr")
+# Exit R
+q() 
+```
+3. Feature Calculation
+```
+python feature_calculation.py
+```
+4. Prediction
+```
+python Proteintox_pred.py
+```
+4. Prediction Output
+```
+predictions_output.csv
 ```
 
 ## Citation
