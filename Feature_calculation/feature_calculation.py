@@ -2,7 +2,6 @@
 """
 Created on Tue Mar  3 10:07:55 2026
 Program to calculate features of Protein sequences using 'protr' package
-@author: anju
 """
 
 import pandas as pd
